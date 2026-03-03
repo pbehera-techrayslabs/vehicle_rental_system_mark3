@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link href="/frontend/dist/styles/output.css" rel="stylesheet">
+  <script src="/frontend/dist/scripts/admin-dashboard.js" defer></script>
+</head>
+<body class="bg-blue-950 min-h-screen">
+  <header class="bg-gray-800 text-white p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+    <div class="flex justify-between">
+    <button id="logout-btn"
+            class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded">
+      Logout
+    </button>
+    </div>
+  </header>
+  <main class="p-8">
+
+    <div class=" bg-white p-6 rounded shadow mb-8 max-w-2xl ">
+      <h2 id="vehicle-form-heading" class="text-xl font-semibold mb-4">Add/Update Vehicle</h2>
+     <form id="vehicle-form" class="grid grid-cols-2 gap-4">
+  <input type="hidden" id="vehicle-id">
+  <input type="text" id="vehicle-name"
+         placeholder="Vehicle Name"
+         class="border p-2 rounded" required>
+
+  <select id="vehicle-category"
+          class="border p-2 rounded" required>
+    <option value="">Select Category</option>
+    <option>Car</option>
+    <option>Bike</option>
+    <option>Scooty</option>
+  </select>
+
+  <select id="vehicle-fuel"
+          class="border p-2 rounded" required>
+    <option value="">Select Fuel</option>
+    <option>Petrol</option>
+    <option>Diesel</option>
+    <option>Electric</option>
+  </select>
+
+  <input type="number" id="vehicle-seating"
+         placeholder="Seating Capacity"
+         class="border p-2 rounded" min="1" max="16" required>
+
+  <input type="number" id="vehicle-price"
+         placeholder="Price Per Day"
+         class="border p-2 rounded" required>
+
+  <button type="submit"
+          class="col-span-2 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
+    Save Vehicle
+  </button>
+</form>
+
+    </div>
+
+    <!-- Vehicle List ---------------------->
+    <div class="bg-white p-6 rounded ">
+      <h2 class="text-xl font-semibold mb-4">All Vehicles</h2>
+
+      <table class="w-full border text-center">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border p-2">Name</th>
+            <th class="border p-2">Category</th>
+            <th class="border p-2">Fuel</th>
+            <th class="border p-2">Seating</th>
+            <th class="border p-2">Price</th>
+            <th class="border p-2">Status</th>
+            <th class="border p-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="vehicle-list"></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
