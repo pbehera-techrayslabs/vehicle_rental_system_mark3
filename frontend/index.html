@@ -8,10 +8,34 @@
     <link rel="stylesheet" href="./dist/styles/output.css">
 </head>
 
-<body>
+<body class="bg-blue-950 min-w-auto min-h-auto">
 
+    <my-header></my-header>
 
+    <!-- Main Section----------------------------- -->
+    <main class="flex flex-col items-center justify-center mt-52 space-y-8">
 
+        <h2 class="text-4xl font-semibold text-blue-50 ">Welcome to the Vehicle Rental System</h2>
+        <p class="text-blue-50 text-center max-w-md text-xl">
+            Rent cars and bikes easily.<br> Admins can manage vehicles and users can book vehicles.
+        </p>
+
+        <!-- Buttons -------------------------------------------------->
+        <div class="flex flex-col md:flex-row gap-4 mt-6">
+            <a href="/frontend/src/pages/"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-center font-medium">
+                Login
+            </a>
+            <a href="/frontend/src/pages/"
+                class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded text-center font-medium">
+                Register
+            </a>
+            <a href="frontend/src/pages/admin-login.html"
+                class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded text-center font-medium">
+                R You Admin?
+            </a>
+        </div>
+        <script type="module" src="./dist/components/header.js"></script>
 </body>
 
 </html>
