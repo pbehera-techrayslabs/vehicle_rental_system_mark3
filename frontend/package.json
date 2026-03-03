@@ -1,0 +1,25 @@
+{
+  "name": "vehicle-rental-system-week4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+
+"scripts": 
+{
+"dev": "npx @tailwindcss/cli -i ./frontend/src/styles/input.css -o ./frontend/dist/output.css --watch",
+"build:css": "npx tailwindcss/cli -i ./frontend/src/styles/input.css -o ./frontend/dist/output.css --minify",
+"build:ts":"npx tsc",
+"build":"npm run build:css && npm run build:ts",
+"test": "echo \"Error: no test specified\" && exit 1"
+}
+}
