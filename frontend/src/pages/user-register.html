@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Rental System - Register</title>
+ <link href="/frontend/dist/styles/output.css" rel="stylesheet">
+</head>
+<body class="bg-blue-950 min-h-screen flex flex-col items-center justify-center">
+ 
+  <my-header class="fixed top-0 left-0 w-full z-10"></my-header>
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-md mt-8">
+    <h1 class="text-2xl font-bold mb-6 text-center text-green-600">Create Account</h1>
+
+   
+    <form id="register-form" class="space-y-4">
+      <label class="block">
+        <span class="font-medium">Full Name</span>
+        <input type="text" id="register-name" maxlength="20" required class="mt-1 block w-full border border-gray-300 rounded p-2" placeholder="Enter your name">
+      </label>
+
+      <label class="block">
+        <span class="font-medium">Email</span>
+        <input type="email" id="register-email" maxlength="360" required class="mt-1 block w-full border border-gray-300 rounded p-2" placeholder="Enter your email">
+      </label>
+
+      <label class="block"><span class="font-medium">Password</span>
+        <input type="password" id="register-password" maxlength="8" required class="mt-1 block w-full border border-gray-300 rounded p-2" placeholder="Enter a password">
+      </label>
+
+      <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+        Register
+      </button>
+    </form>
+
+    <p class="mt-4 text-center text-gray-600">Already have an account? <a href="/frontend/src/pages/user-login.html" class="text-blue-600 hover:underline font-semibold">Login here</a>
+    </p>
+  </div>
+
+
+ 
+  <script type="module" src="/frontend/dist/components/header.js"></script>
+  <script type="module" src="/frontend/dist/scripts/user-register.js"></script>
+</body>
+</html>
