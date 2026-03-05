@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const seatingInput = document.getElementById("vehicle-seating") as HTMLInputElement;
     const formHeading = document.getElementById("vehicle-form-heading") as HTMLElement;
     const submitButton = form.querySelector("button[type='submit']") as HTMLButtonElement;
+    const analytics= document.getElementById("analytics");
+    const bookings= document.getElementById("bookings");
     const logoutBtn = document.getElementById("logout-btn");
 
 //    storage
@@ -200,6 +202,15 @@ document.addEventListener("DOMContentLoaded", () => {
         renderVehicles();
         showToast("Vehicle deleted successfully 🗑️");
     };
+
+    analytics?.addEventListener("click", ()=>{
+        window.location.href = "/frontend/src/pages/admin-analytics.html"
+    });
+
+    bookings?.addEventListener("click", () =>{
+        window.location.href="/frontend/src/pages/admin-bookings.html"
+    })
+
 
     // logout
     logoutBtn?.addEventListener("click", () => {
