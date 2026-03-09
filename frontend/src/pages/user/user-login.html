@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        
+    <meta charset="UTF-8">
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link href="/frontend/dist/styles/output.css" rel="stylesheet">
+        <title>Login - Vehicle Rental System</title>
+</head>
+
+<body class="bg-blue-950 min-h-screen flex flex-col items-center justify-center">
+    <my-header class="fixed top-0 left-0 w-full z-10">
+
+    </my-header>
+        <div class="bg-white p-8 rounded shadow-md w-full max-w-md mt-8">
+        <p class=" text-gray-600">
+            Login to manage your bookings and vehicles.
+        </p>
+
+        <form id="loginForm" class="space-y-4 ">
+
+            <label class="block"><span class="font-medium">Email</span>
+                <input type="email" id="login-email" maxlength="25" required
+                    class="mt-1 block w-full border border-gray-300 rounded p-2" placeholder="Enter your email">
+            </label>
+            <label class="block"><span class="font-medium">Password</span>
+                <input type="password" id="password" maxlength="8" required
+                    class="mt-1 block w-full border border-gray-300 rounded p-2" placeholder="Enter your password">
+            </label>
+
+            <button type="submit" id="submit"
+                class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Login</button>
+
+             <p class="mt-1 text-center text-gray-600 text-sm">New user?
+                <a href="/frontend/src/pages/user/user-register.html" class="text-green-500 hover:underline">
+                    Register here
+                </a>
+                 
+            </p>
+
+    </div>
+
+        
+    
+    <script type="module" src="/frontend/dist/scripts/user/user-login.js"></script>
+        
+    <script type="module" src="/frontend/dist/components/header.js"></script>
+
+</body>
+
+</html>
